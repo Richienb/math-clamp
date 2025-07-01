@@ -37,14 +37,14 @@ test('main', t => {
 });
 
 test.failing('+0 = -0', t => {
-	t.is(mathClamp(-0, {max: -0), 0);
-	t.is(mathClamp(-0, {min: -0), 0);
+	t.is(mathClamp(-0, {max: -0}), 0);
+	t.is(mathClamp(-0, {min: -0}), 0);
 
-	t.is(mathClamp(-0, {max: 0), 0);
-	t.is(mathClamp(-0, {min: 0), 0);
+	t.is(mathClamp(-0, {max: 0}), 0);
+	t.is(mathClamp(-0, {min: 0}), 0);
 
-	t.is(mathClamp(1, {max: -0), 0);
-	t.is(mathClamp(-1, {min: -0), 0);
+	t.is(mathClamp(1, {max: -0}), 0);
+	t.is(mathClamp(-1, {min: -0}), 0);
 
 	t.is(mathClamp(0, {min: -0, max: 0}), 0);
 	t.is(mathClamp(0, {min: 0, max: -0}), 0);
